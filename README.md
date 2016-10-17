@@ -102,4 +102,17 @@ $ meteor npm install --save classnames
 10.11 Selectively publish based on privacy status imports/api/tasks.js
 
 10.12 Extra method security imports/api/tasks.js
-this will ensure that if you didn't create the task, you can't delete it or check it off the list. UNLESS the task is set to public!!! 
+this will ensure that if you didn't create the task, you can't delete it or check it off the list. UNLESS the task is set to public!!!
+
+
+Step 11's:  TESTING
+
+11.1 add a test driver for the Mocha JS test framework:
+$ meteor add practicalmeteor:mocha
+To run the app in test mode from now on:
+$ meteor test --driver-package practicalmeteor:mocha
+
+
+
+11.2 Add a scaffold for the method test in imports/api/tasks.tests.js
+We wrote a test to make sure that a random userId can delete its own task.  If you run the app in test mode, we should get 100%!
